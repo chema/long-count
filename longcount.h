@@ -17,11 +17,11 @@
 */
 
 #define SECS		86400		// Seconds in a day ( 60 secs * 60 mins * 24 hrs)
-#define	DAYS		20			// Days in a Score
-#define SCORES		18			// Scores in a Solar Cycle
+#define	DAYS		20		// Days in a Score
+#define SCORES		18		// Scores in a Solar Cycle
 
 #define GMTCOR		584283		// Default correlation (GMT)
-#define JCCOR		1272022		/* UNIX Time correlation */
+#define JCCOR		1272022		// UNIX Time correlation
 #define TRUE		1
 #define FALSE		0
 

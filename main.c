@@ -37,18 +37,20 @@ int digitSize ( const struct lc *);
 
 
 /* MAIN */
-int main (int argc, const char *argv[]) 
+int main (int argc, char **argv) 
 { 
-	long int rawDays;
+	long rawDays;
 	struct lc *datePtr = malloc (sizeof (struct lc));  // Is malloc necessary, or can I just use a simple pointer??
-	
-	if (argc==0) { /* use system time for calculations */
-		long int unixTimeDays = time(NULL)/SECS;					/* Number of days since Unix Time Epoch, remainder truncated */
-		// int gregorianCorrelation = GMTCOR;						// TODO, TURN INTO ARG
-		rawDays = unixTimeDays + (GMTCOR + JCCOR);					/* Number of days since Long Count Epoch */
+
+//	printf( "argc = %d, argv = %s \n", argc, argv[1] );
+
+	if (argc==1) { /* use system time for calculations */
+		long int unixTimeDays = time(NULL)/SECS;				/* Number of days since Unix Time Epoch, remainder truncated */
+		// int gregorianCorrelation = GMTCOR;					// TODO, TURN INTO ARG
+		rawDays = unixTimeDays + (GMTCOR + JCCOR);			/* Number of days since Long Count Epoch */
 	}
 	else {
-		rawDays = atol(argv[1]);									// Turn first arg into long int
+		rawDays = atol(argv[1]);					// Turn first arg into long int
 	}
 	
 	
@@ -96,9 +98,6 @@ int main (int argc, const char *argv[])
 
 	return 0;
 } 
-
-
-
 
 
 /* Calculate the date TURN TO POINTER FUNCTION!!! */
