@@ -35,6 +35,6 @@ typedef	long  int LongNumber;
 struct lc {						
 	Digit lc_day;				/* days since beginning of score [0-19] */
 	Digit lc_score;				/* score days since beginning of cycle [0-17] (i.e powalli/winal/twenty days) */
-	LongNumber lc_cycle;		/* cycles since epoch, (one cycle is eighteen score days or 360 days) */
+	LongNumber lc_cycle;			/* cycles since epoch, (one cycle is eighteen score days or 360 days) */
 	Flag  lc_postepoch;			/* Epoch flag, TRUE if date is post-epoch, FALSE if date is pre-epoch */
 };

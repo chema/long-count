@@ -54,7 +54,7 @@ int main (int argc, const char *argv[])
 	
 	/* Make structure */	
 	datePtr = lcdate (&rawDays);
-	printf ("Epoch: %d Days: %d Scores: %d Cycles: %d\n", datePtr->lc_postepoch, datePtr->lc_day, datePtr->lc_score, datePtr->lc_cycle);
+	printf ("Epoch: %hd Days: %hd Scores: %hd Cycles: %ld\n", datePtr->lc_postepoch, datePtr->lc_day, datePtr->lc_score, datePtr->lc_cycle);
 
 	/* Calculate size of array */
 	int datePlaces = digitSize (datePtr);
