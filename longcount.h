@@ -20,7 +20,7 @@
 #define	DAYS		20		// Days in a Score
 #define SCORES		18		// Scores in a Solar Cycle
 
-#define GMTCOR		584283		// Default correlation (GMT)
+#define GMTCOR		584283		// Default Maya to Gregoerian correlation (GMT)
 #define JCCOR		1272022		// UNIX Time correlation
 #define TRUE		1
 #define FALSE		0
